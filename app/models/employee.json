@@ -1,0 +1,34 @@
+{"employees":
+    [
+        {
+            "empName": "Swati Nanda",
+            "designation": "Project Manager",
+            "company": "InfoSys",
+            "mob": "9092353322"
+        },
+        {
+            "empName": "Pravat Mishra",
+            "designation": "English Trainer",
+            "company": "FM College",
+            "mob": "7847324432"
+        },
+        {
+            "empName": "Divya Singh",
+            "designation": "Sr. Content Writer",
+            "company": "Wipro",
+            "mob": "9625477893"
+        },
+        {
+            "empName": "Baby Roy",
+            "designation": "Graphic Engineer",
+            "company": "Tech Mahindra",
+            "mob": "9096266548"
+        },
+        {
+            "empName": "Satyabrata Panda",
+            "designation": "Sr. Software Engineer",
+            "company": "Capgemini",
+            "mob": "5567748833"
+        }
+    ]
+}
