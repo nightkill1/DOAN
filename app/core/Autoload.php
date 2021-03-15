@@ -35,6 +35,7 @@ class Autoload{
         foreach($this->defaultFileLoad() as $file){
             require_once($this->rootDir.'/'.$file);
         }
+        
     }
 
     private function defaultFileLoad(){
@@ -42,7 +43,9 @@ class Autoload{
             'app/core/Router.php',
             'app/routers.php',
             // 'app/models/employee.json'
-           
+            'app/controllers/PHPMailer/src/Exception.php',
+            'app/controllers/PHPMailer/src/PHPMailer.php',
+            'app/controllers/PHPMailer/src/SMTP.php',
         ];
     }
 }

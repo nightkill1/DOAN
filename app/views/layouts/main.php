@@ -27,6 +27,66 @@
 
     <title>Đồ án</title>
 </head>
+<style>
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Roboto;
+ }
+body{
+     /* display: flex; */
+     justify-content: flex-end;
+     align-items: center;
+     min-height: 100vh;
+     flex-direction: column;
+     /* background: url(https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_footer_cho_website/Aare.svg); */
+ }
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+footer{
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer a{
+    color: #f55;
+}
+footer .container-flud{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+</style>
 <script>
     var obj;    
    
@@ -57,7 +117,7 @@
             }
         }
 
-
+        
         rawFile.send(null);
         return data;
     }
@@ -85,40 +145,24 @@
         $("#NH3-h1-body-box").html(obj[size].NH3);
         $("#temp").val(obj[size].Tempareture);
         
-        draw();
+        // draw();
     }
    
     // window.setInterval(showNow(),3000)
 
 </script>
 
-<body style="background-color: rgb(226, 226, 209);" onload="draw()">
-    <nav class="navbar navbar-expand navbar-light bg-faded">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Active <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                    <a class="dropdown-item" href="#">Action 1</a>
-                    <a class="dropdown-item" href="#">Action 2</a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </nav>
+<body style="background-color: rgb(226, 226, 209);" >
+
+<div class="topnav">
+  <a class="active" href="./">Trang chủ</a>
+  <a href="./dasboard">Thống kê</a>
+
+</div>
 
     
         
-        <div class="card-body p-0">
+        <div class="card-body p-5">
             
             <?php
                 echo $content;
@@ -135,7 +179,63 @@
             ?>
         </table>
         </div>
-        <div class="card-footer">Header</div>
+        <footer>
+            <div class="container-flud" style="width: 100%;">
+                <!--Bắt Đầu Nội Dung Giới Thiệu-->
+                <div class="noi-dung about">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>Lorem ipsumdolor sit...</p>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <!--Kết Thúc Nội Dung Giới Thiệu-->
+                <!--Bắt Đầu Nội Dung Đường Dẫn-->
+                <div class="noi-dung links">
+                    <h2>Đường Dẫn</h2>
+                    <ul>
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Về Chúng Tôi</a></li>
+                        <li><a href="#">Thông Tin Liên Lạc</a></li>
+                        <li><a href="#">Dịch Vụ</a></li>
+                        <li><a href="#">Điều Kiện Chính Sách</a></li>
+                    </ul>
+                </div>
+                <!--Kết Thúc Nội Dung Đường Dẫn-->
+                <!--Bắt Đâu Nội Dung Liên Hệ-->
+                <div class="noi-dung contact">
+                    <h2>Thông Tin Liên Hệ</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <span>Đường Số 1<br />
+                                Quận 1, Thành Phố Hồ Chí Minh<br />
+                                Việt Nam</span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone"></i></span>
+                            <p><a href="#">+84 123 456 789</a>
+                                <br />
+                                <a href="#">+84 987 654 321</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope"></i></span>
+                            <p><a href="#">diachiemail@gmail.com</a></p>
+                        </li>
+                        <li>
+                            <form class="form">
+                                <input type="email" class="form__field" placeholder="Đăng Ký Subscribe Email" />
+                                <button type="button" class="btn btn--primary  uppercase">Gửi</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <!--Kết Thúc Nội Dung Liên Hệ-->
+            </div>
+        </footer>
     
 
 

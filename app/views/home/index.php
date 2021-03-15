@@ -1,19 +1,22 @@
 <script>
- window.setInterval(()=>{
+   
+//  window.setInterval(()=>{
     
-    refeshTXT();
-    showNow();
-    setChar1();
-    setChar2();
-    setChar3();
-    setChar4();
-    // showNow(),
-    console.log("refresh file")
-}, 1000);
+//     refeshTXT();
+//     // showNow();
+//     setChar1();
+//     setChar2();
+//     setChar3();
+//     setChar4();
+//     showNow();
+//     // console.log("refresh file")
+// }, 5000);
+
+    
 </script>
-<div class="container p-0 ">
+<div class="container-flud p-0 ">
     <div class="row">
-        <div class=".col-xl-8 col-sm-9 ">
+        <div class=".col-xl-6 col-sm-9">
             <div class="row">
                 <div style="width: 100%; text-align: center; padding: 10px 0 10px 0;">   
                     <h1>
@@ -89,12 +92,12 @@
 
                     <div class="col-sm-12 col-md-12 col-lg-6" style="width: 100%;">
                         <!-- line chart canvas element -->
-                        <canvas id="buyers" width="400" height="300"></canvas>
+                        <canvas id="buyers" width="600" height="300"></canvas>
                             
 
                         <script>
 
-                        
+
                             
                             function setChar1(){
 
@@ -117,32 +120,23 @@
                                         let num = obj.length;
                                         // console.log(num)
                                         for(let i = num -7; i < num  ; i++){
-                                            buyerData.labels.push(obj[i].time);
+                                            buyerData.labels.push(obj[i].hour+":"+obj[i].minus+":"+obj[i].second);
                                             numdataItem =parseFloat(obj[i].Tempareture);
                                             buyerData.datasets[0].data.push(numdataItem);
                                         }
                                         var buyers = document.getElementById('buyers').getContext('2d');
-
                                         // draw line chart
                                         new Chart(buyers).Line(buyerData);
                             }
-                            
                         </script>
                         <div style="width: 100%; text-align: center;">
                             <h2>NHIỆT ĐỘ</h2>
                         </div>
-                    
-                        
                     </div>
-                
                             <div class="col-sm-12 col-md-12 col-lg-6" style="width: 100%;">
                             <!-- line chart canvas element -->
-                            <canvas id="buyers1" width="400" height="300"></canvas>
-                            
-
+                            <canvas id="buyers1" width="600" height="300"></canvas>
                             <script>
-                            
-                                
                                 function setChar2(){
                                     var buyerData1 = {
                                         labels : [],
@@ -161,7 +155,7 @@
                                     let num = obj.length;
                                     // console.log(num)
                                     for(let i = num -7; i < num  ; i++){
-                                        buyerData1.labels.push(obj[i].time);
+                                        buyerData1.labels.push(obj[i].hour+":"+obj[i].minus+":"+obj[i].second);
                                         numdataItem =parseFloat(obj[i].pH);
                                         buyerData1.datasets[0].data.push(numdataItem);
                                     }
@@ -181,7 +175,7 @@
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-6" style="width: 100%;">
                             <!-- line chart canvas element -->
-                            <canvas id="buyers2" width="400" height="300"></canvas>
+                            <canvas id="buyers2" width="600" height="300"></canvas>
                                 
 
                             <script>
@@ -205,7 +199,7 @@
                                     let num = obj.length;
                                     // console.log(num)
                                     for(let i = num -7; i < num  ; i++){
-                                        buyerData2.labels.push(obj[i].time);
+                                        buyerData2.labels.push(obj[i].hour+":"+obj[i].minus+":"+obj[i].second);
                                         numdataItem =parseFloat(obj[i].Oxyzen);
                                         buyerData2.datasets[0].data.push(numdataItem);
                                     }
@@ -223,7 +217,7 @@
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6" style="width: 100%;">
                         <!-- line chart canvas element -->
-                        <canvas id="buyers3" width="400" height="300"></canvas>
+                        <canvas id="buyers3" width="600" height="300"></canvas>
                             
 
                         <script>
@@ -249,7 +243,7 @@
                                 let num = obj.length;
                                 // console.log(num)
                                 for(let i = num -7; i < num  ; i++){
-                                    buyerData3.labels.push(obj[i].time);
+                                    buyerData3.labels.push(obj[i].hour+":"+obj[i].minus+":"+obj[i].second);
                                     numdataItem =parseFloat(obj[i].NH3);
                                     buyerData3.datasets[0].data.push(numdataItem);
                                 }
@@ -258,7 +252,12 @@
                                 // draw line chart
                                 new Chart(buyers3).Line(buyerData3);
                             }
-                                    
+                            showNow();
+                            refeshTXT();    
+                            setChar1();
+                            setChar2();
+                            setChar3();
+                            setChar4();
                         </script>
 
                         <div style="width: 100%; text-align: center;">
@@ -274,9 +273,9 @@
         </div>
         <div class=".col-xl-6 col-sm-3">
             <div style="width: 100%; text-align: center; padding: 10px 0 10px 0;">   
-                <h1>
-                    NHIỆT ĐỘ
-                </h1>
+                <h2>
+                    NGƯỠNG AN TOÀN
+                </h2>
             </div>
             <?php
                 $this->renderPartial('layouts/_sitebar');

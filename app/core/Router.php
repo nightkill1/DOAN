@@ -47,7 +47,7 @@ class Router{
     {
         self::addRouter('GET|POST',$url, $action);
     }
-
+    
     public function map(){
 
         // biến kiểm tra ROUTE

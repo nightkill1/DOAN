@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "thietlap": {
+            "tempareture_high": 47,
+            "tempareture_low": 20,
+            "ph_high": 9,
+            "ph_low": 7,
+            "oxyzen_high": 10,
+            "oxyzen_low": 2,
+            "nh3_high": 5,
+            "nh3_low": 0
+        }
+    }
+]
